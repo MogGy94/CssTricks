@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive
+}
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+.sec{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#ffffff, #71c9fc, blue);;
+    scroll-snap-align: center;
+   
+}
+
+h3{
+    color: #fff;
+    font-size: 10vw;
+    text-align: center;
+    margin: 0 50px;
+
+}
+
+.sec:nth-child(1){
+    background:  #1531af  url(./img/Sejuani_Splash_2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-blend-mode: multiply;
+}
+
+
+.sec:nth-child(2){
+    background:  #5fca3f  url(./img/Sejuani_Splash_1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-blend-mode: multiply;
+}
+
+.sec:nth-child(3){
+    background:  #f8e63e  url(./img/Sejuani_0.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-blend-mode: multiply;
+}
+
+.sec:nth-child(4){
+    background:  #59e6ff  url(./img/Sejuani_5.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-blend-mode: multiply;
+}
+
+.sec:nth-child(5){
+    background:  #ff743e  url(./img/Sejuani_6.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-blend-mode: multiply;
+}
+
+.sec:nth-child(6){
+    background:  #3f6bca  url(./img/Sejuani_Dawnchaser.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-blend-mode: multiply;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    width:100%;
+    text-align: center;
+}
+
+.content h2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.content h2 span {
+
+    position: sticky;
+    top: 0;
+    line-height: 100vh;
+    height: 100vh;
+    color: #fff;
+
+    font-size: 14vw;
+    margin-top: calc(100vh* var(--i));
+
+}

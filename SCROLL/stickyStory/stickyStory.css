@@ -1,0 +1,101 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: consolas;
+}
+
+.heading{
+    display: grid;
+    place-items:center;
+    min-height: 100vh;
+    background: #111;
+}
+
+.heading h1{
+    margin:0;
+    padding: 0;
+    font-size: 120px;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    
+}
+
+.heading h1:before{
+   content: "";
+   position: absolute;
+   top: 0;
+   left: -10%;
+   width: 120%;
+   height: 100%;
+   background: #111111b2;
+   z-index: -1;
+   border-radius: 5px;
+}
+/*https://picsum.photos/seed/picsum/200/300*/
+
+.heading:first-child{
+   
+    background: url(https://picsum.photos/seed/true/1200/800);
+    background-size: cover;
+   
+}
+
+
+.heading:last-child{
+    
+    background: url(https://picsum.photos/seed/last/1200/800);
+    background-size: cover;
+   
+}
+
+.storys {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+section .storyBx h2{
+    margin: 0 0 20px;
+    padding: 0;
+    font-size: 60px;
+}
+
+section .storyBx p{
+    margin: 0 0 20px;
+    padding: 0;
+    font-size: 20px;
+    text-align: justify;
+}
+.par>.imgBx{
+    grid-column: 2;
+}
+
+.par>.storyBx{
+    grid-row: 1;
+
+}
+.storys .imgBx img{
+    position: absolute;
+    top: 0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+   /*  border-radius: 15%; */
+
+}
+section .imgBx{
+    position: sticky;
+    top: 0;
+    min-width: 50%;
+    height: 100vh;
+    background: #000;
+}
+
+section .storyBx{
+    padding: 10px;
+    /* max-height: 50%; */
+    align-self: center;
+    overflow: auto;
+    
+}

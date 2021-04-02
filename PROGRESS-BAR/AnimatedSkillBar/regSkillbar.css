@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+    --bg : #161616;
+    --skill-body-1: #616161;
+    --skill-body-2: #333;
+    --skill-body-3: #222;
+    --empty-prog: #151515;
+
+    --orange: #ffa36c;
+    --green: #bbd196;
+    --purple: #56556e;
+    --violet: #3c2946;
+    --blue: #96e5f8;
+
+}
+
+body{
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background: var(--bg);
+}
+
+.container{
+    position: relative;
+    width: 500px;
+}
+
+.container h1{
+    color: #fff;
+    text-align:center;
+}
+
+.container .skills{
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 20px; 
+    margin: 20px 0;
+    padding: 24px 20px 18px;
+    background: linear-gradient(
+        var(--skill-body-1) 0%,
+        var(--skill-body-2) 10%,
+        var(--skill-body-3)
+    );
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #000;
+    transition: 0.5s;
+}
+.container:hover .skills {
+    opacity: 0.3;
+}
+
+.container .skills:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+.container .skills:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0; 
+    width: 100%;
+    height: 50%;
+    background: rgba(255, 255, 255, .1);
+    z-index: 10;
+}
+
+.container .skills .name {
+    position: relative;
+    width: 100px;
+    text-align: right;
+    color: #fff;
+    margin-top: -2px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+.container .skills .value {
+    position: relative;
+    width: 40;
+    color: #fff;
+    margin-top: -2px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.container .skills .percent {
+    position: relative;
+    width: 100%;
+    height: 20px; /*altura del progreso*/
+    border-radius: 30px;
+    background: var(--empty-prog);
+    box-shadow: inset 0 0 10px #000;
+    overflow: hidden;
+}
+
+.container .skills .percent .progress
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: inset 0 0 2px #000;
+    animation: animate 4s ease-in-out forwards;
+}
+
+@keyframes animate {
+    from{
+        width: 0;
+    }
+}
+
+.container .skills:nth-child(2n) .percent .progress{
+    background: linear-gradient(
+        45deg,
+        var(--violet),var(--green),var(--orange)
+    )
+}
+
+.container .skills:nth-child(2n + 1) .percent .progress{
+    background: linear-gradient(
+        45deg,
+        var(--purple),var(--blue),var(--green)
+    )
+}
+
+
+

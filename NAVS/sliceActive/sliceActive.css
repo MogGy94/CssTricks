@@ -1,0 +1,80 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: #56556e;
+    font-family: consolas;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    
+}
+
+ul{
+    display: grid;
+    position: relative;
+    grid-auto-flow: column;
+    background: #3c2946;
+    border-radius: 30px;
+    box-shadow: 0 0 15px 3px #3c2946;
+    overflow: hidden;
+    z-index: 0;
+}
+
+ul li{
+    list-style: none;
+    width: 150px;
+}
+
+
+
+ul li a{
+    display: block;
+    padding: 20px;
+    color: #fff;
+    transition: 0.5s;
+    text-decoration: none;
+    text-align: center;
+}
+
+ul li.active a{
+    color: #000;
+}
+.slice{
+    position: absolute;
+    width: 150px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #bbd196;
+    z-index: -1;
+    transition: 0.5s;
+    opacity: 0;
+
+
+}
+
+ul li:nth-child(1).active ~ .slice{
+    left:0;
+    opacity: 1;
+}
+ul li:nth-child(2).active ~ .slice{
+    left: 150px;
+    opacity: 1;
+}
+ul li:nth-child(3).active ~ .slice{
+    left: calc(150px *2);
+    opacity: 1;
+}
+ul li:nth-child(4).active ~ .slice{
+    left:calc(150px *3);
+    opacity: 1;
+}
+ul li:nth-child(5).active ~ .slice{
+    width: 200px;
+    left:calc(150px *4);
+    opacity: 1;
+}

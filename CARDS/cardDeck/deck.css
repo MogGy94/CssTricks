@@ -1,0 +1,103 @@
+*{
+    margin: 0 ; 
+    padding: 0;
+    background-color: #17141d;
+    color: white;
+    font-family: consolas;
+}
+
+.card-list{
+    display: grid;
+    place-items: center;
+    grid-auto-flow: column;
+    height: 100vh;
+
+}
+
+.card{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 350px;
+    width: 400px;
+    min-width:  250px;
+    padding: 1.5em;
+
+    border-radius: 16px;
+    background: #17141d;
+    box-shadow: -1rem 0 3rem #000;
+    transition: 0.2s;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #493d63;
+    border-radius: 10px;
+    box-shadow: 
+        inset 2px 2px 2px hsla(0, 0%, 100%, .25) , 
+        inset -2px -2px -2px rgba(0,0,0,.25 );
+}
+
+::-webkit-scrollbar-track{
+    background: linear-gradient(90deg, #201c29, #201c29 1px, #17141d 0 ,#17141d);
+}
+
+.card:hover{
+    transform: translateY(-1rem);
+}
+/*~ selecciona todo los hermanos directos del componente*/
+.card:hover~.card{
+    transform: translateX(130px);
+}
+
+.card:not(:first-child){
+    margin-left: -130px;
+}
+
+.card-author {
+    position: relative;
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    max-height: 20%;
+    align-items: center;
+}
+
+.author-avatar{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    overflow: hidden;
+    margin: 16px 10px;
+}
+.author-avatar img{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.half-circle{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    fill: none;
+    stroke: #ff8a00;
+    stroke-width: 8;
+    stroke-linecap: round;
+    pointer-events: none;
+
+}
+
+.author-name-prefix{
+    font-style: normal;
+    font-weight: 700;
+    color: #7a7a8c;
+}

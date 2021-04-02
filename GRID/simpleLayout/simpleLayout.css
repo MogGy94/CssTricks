@@ -1,0 +1,65 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: consolas;
+    color: #fff;
+}
+
+body{
+    background: #000;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.grid-container {
+    display: grid;  
+    grid-template-columns: 1fr 1.2fr 1.5fr;
+    grid-template-rows: 1fr 4fr 3fr 2fr;
+    grid-template-areas: 
+        "main main header"
+        "main main candy"
+        "nom yum candy"
+        "footer footer candy"
+    ;
+
+    height: calc(100vh - 2em);
+    margin: 2em;
+}
+
+main{
+    grid-area: main;
+   /*  grid-column: 1 / span 2;
+    grid-row: 1 / span 2; */
+    background: #fffAdf
+}
+
+section.nom{
+   /*  grid-area: 3 / 1 / 4 / 2; */
+   grid-area:nom;
+    background:  #c4b35a
+}
+section.yum{
+    grid-area:yum;
+    /* grid-area: 3 / 2 / 4 / 3; */
+    background: #333333
+}
+section.footer{
+    grid-area:footer;
+   /*  grid-area: 4 / 1 / 4 / 3; */
+    background: #202020
+}
+
+header {
+    grid-area: header
+    /* grid-area: 1 / 3 / 2 / 4; */
+}
+
+section.candy {
+    grid-area: candy;
+    /* grid-area: 2 / 3 / 5/ 3; */
+    background-size: cover;
+}
+section.candy img{
+    height: 100%;
+    background-size: cover;
+}

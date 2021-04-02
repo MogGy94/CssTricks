@@ -1,0 +1,16 @@
+*{
+    font-family: consolas;
+    text-align: center;
+
+}
+.grid {
+    display: grid;
+    /* height: 100vh; */
+    grid-template: repeat(auto-fit,minmax(200px,1fr)) / repeat(auto-fit,minmax(200px,1fr));
+    gap:  10px;
+}
+
+img{
+    width: 100%;
+    
+}

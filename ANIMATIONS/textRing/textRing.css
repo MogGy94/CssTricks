@@ -1,0 +1,43 @@
+*{
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+
+body{
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: #675688;
+}
+
+.circle{
+    transform-style: preserve-3d;
+    animation: rotate 8s linear infinite; 
+}
+
+.circle .char{
+    position: absolute;
+    top:0;
+    left: 0;
+    background: #fff;
+    color: #231246;
+    font-size: 4em;
+    padding: 20px 10px;
+    border-top :  5px double #231246;
+    border-bottom :  5px double #231246;
+    transform-style: preserve-3d;
+    transform-origin: center;
+    transform: rotateY(calc(var(--char-index)* (360deg / var(--wlen)))) translateZ(calc(8px * var(--wlen) )) ;
+}
+
+@keyframes rotate {
+    0%{
+        transform: perspective(1000px) rotateY(360deg) rotateX(15deg);
+    }
+    100%{
+        transform: perspective(1000px) rotateY(0deg) rotateX(15deg);
+    }
+}

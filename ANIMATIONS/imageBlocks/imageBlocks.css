@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: consolas
+}
+
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #333;
+
+}
+main{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    text-shadow: 10px 5px 15px #000000;
+}
+
+section h2{
+    position : relative;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    line-height: 100vh;
+    font-size: 10vw;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.banner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+  
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+}
+main h2{
+    
+    text-align: center;
+    font-size: 10vw;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 5px;
+    /* grid-area:  1/ 1/-1/-1; */
+}
+.banner .blocks{
+    position: relative;
+    display: block;
+    width: 5vw;
+    height: 5vw;
+    /* background: #fff; */
+    animation: animate 0.25s ease-in-out  forwards;
+}
+.banner .blocks:nth-child(even){
+    animation: animate 0.5s ease-in-out forwards;
+}
+
+.banner .blocks:nth-child(7n+3){
+    animation: animate 2.0s ease-in-out forwards;
+}
+
+.banner .blocks:nth-child(7n+7){
+    animation: animate 1.0s ease-in-out forwards;
+}
+
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: scale(0) translateY(1000px);
+    }
+    50%{
+        opacity: 1;
+        background: url(https://picsum.photos/seed/carola/1500/1000);
+        background-position: center;
+        background-attachment: fixed;
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1) translateY(opx);
+         background: url(https://picsum.photos/seed/carola/1500/1000);
+        background-position: center;
+        background-attachment: fixed;
+    }
+}

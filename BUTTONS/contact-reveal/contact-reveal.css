@@ -1,0 +1,78 @@
+*{
+    margin: 0; 
+    padding: 0;
+    font-family: consolas;
+}
+body{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.container  {
+    width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-evenly;
+}
+
+.container .box{
+    text-align: center;
+}
+.container .box .icon i{
+    font-style: normal;
+   /*  font-weight: bold; */
+    font-size: 80px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.container .box .icon h3,
+.container .box .icon h4{
+    position: relative;
+    overflow: hidden; /**Super important */
+    font-weight: 400px;
+    margin: 0;
+    padding: 2px 5px;
+    font-size: 24px;
+    transition-delay: 0.333333s;
+    color: transparent
+}
+
+.container .box i:hover ~ h3,
+.container .box i:hover ~ h4{
+    color: #000;
+}
+
+.container .box .icon h4{
+    font-weight: 1000;
+    margin: 5px 0;
+    font-style: 30px;
+}
+
+.container .box .icon h3:before,
+.container .box .icon h4:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background: #00bcd4;
+    transition: 1s;
+}
+
+.container .box .icon h4:before{
+    left: initial;
+    right: 100%;
+    background: #9c27b0;
+}
+
+.container .box i:hover ~ h3:before{
+    left: -100%;
+}
+.container .box i:hover ~ h4:before{
+    left: initial;
+    right: -100%;    
+}

@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: consolas;
+}
+body{
+    background: #262626;
+}
+
+.skewBox{
+    background: #ffd857;
+    padding: 100px 0;
+    transform: skew(0deg , -10deg) translateY( -120px);
+    
+}
+
+.container{
+    padding: 150px 200px;
+    transform: skew(0deg, 10deg);
+
+}
+
+.container h1{
+    margin: 0;
+    padding: 20px 0;
+    font-size: 3em;
+}
+
+.container p{
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5em;
+    width: 80%
+}
+
+.sec2 {
+    padding: 0 20%  150px;
+    color: #fff;
+    text-align: right;
+    height: 40vh;
+   /*  background:  */
+}
+
+.sec2 h1 {
+    margin: 0 ;
+    padding: 20px 0;
+    font-size: 3em;
+}
+
+.sec3 {
+    padding:  40%  20% 10% 20%;
+    color: #fff;
+    text-align: right;
+    height: 30vh;
+    background: #579aff;
+    clip-path: polygon(
+        0 40% , 100% 0, 100% 100% ,  0 100%
+    );
+}
+
+.sec3 h1 {
+    margin: 0 ;
+    padding: 20px 0;
+    font-size: 3em;
+}
